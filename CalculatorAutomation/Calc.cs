@@ -165,6 +165,8 @@ namespace CalculatorAutomation
             clearAll.Click();
         }
 
+
+        //RESULT
         public int getResult()
         {
             int res;
