@@ -16,7 +16,6 @@ namespace CalculatorAutomation
         private Label result;
         public Calc()
         {
-            Initialize();
         }
 
         public void Initialize()

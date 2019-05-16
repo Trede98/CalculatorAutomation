@@ -8,11 +8,18 @@ namespace CalculatorAutomation
     [TestClass]
     public class UnitTest1
     {
+
+        Calc c;
+
+        public UnitTest1()
+        {
+            this.c = new Calc();
+        }
+
         [TestMethod]
         public void TestMethod1()
         {
-            Calc c = new Calc();
-
+            c.openApp();
             c.clickOne();
             Thread.Sleep(700);
             c.clickFive();
@@ -26,6 +33,11 @@ namespace CalculatorAutomation
             Assert.AreEqual(11, c.getResult());
             c.closeApp();
 
+        }
+
+        [TestMethod]
+        public void TestMethod2()
+        {
             c.openApp();
             c.clickThree();
             Thread.Sleep(700);
