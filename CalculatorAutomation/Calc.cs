@@ -14,8 +14,17 @@ namespace CalculatorAutomation
         private Button zero, one, two, three, four, five, six, seven, eight, nine;
         private Button equal, plus, minus, multiply, divide, backSpace, clear, clearAll;
         private Label result;
+
+        private static Calc instance;
         public Calc()
         {
+        }
+
+        public static Calc getInstance()
+        {
+            if (instance == null)
+                instance = new Calc();
+            return instance;
         }
 
         public void Initialize()

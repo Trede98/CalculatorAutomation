@@ -54,5 +54,25 @@ namespace CalculatorAutomation
             Assert.AreEqual(300, c.getResult());
             c.closeApp();
         }
+
+        [TestMethod]
+        public void TestMethod3()
+        {
+            Calc.getInstance().openApp();
+            Calc.getInstance().clickSeven();
+            Thread.Sleep(700);
+            Calc.getInstance().clickTwo();
+            Thread.Sleep(700);
+            Calc.getInstance().clickDivide();
+            Thread.Sleep(700);
+            Calc.getInstance().clickThree();
+            Thread.Sleep(700);
+            Calc.getInstance().clickSix();
+            Thread.Sleep(700);
+            Calc.getInstance().clickEqual();
+            Thread.Sleep(700);
+            Assert.AreEqual(2, Calc.getInstance().getResult());
+            Calc.getInstance().closeApp();
+        }
     }
 }
